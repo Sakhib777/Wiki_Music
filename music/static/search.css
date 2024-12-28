@@ -1,0 +1,83 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2em;
+    color: #4a90e2;
+}
+
+/* Основной контент */
+.main-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.results-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 5px;
+}
+
+.results-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    margin-bottom: 10px;
+}
+
+.result-link {
+    text-decoration: none;
+    color: #4a90e2;
+    font-size: 1.2em;
+}
+
+.result-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.no-results {
+    font-style: italic;
+    color: #999;
+}
+
+/* Кнопка и другие элементы */
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

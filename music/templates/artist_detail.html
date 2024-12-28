@@ -1,0 +1,27 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ artist.name }}</title>
+    <link rel="stylesheet" href="{% static 'artist_detail.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="artist-name">{{ artist.name }}</h1>
+        </header>
+        <main class="main-content">
+            <div class="artist-profile">
+                <img src="{{ artist.photo.url }}" alt="{{ artist.name }}" class="artist-photo">
+                <div class="artist-details">
+                    <p class="artist-bio">{{ artist.biography }}</p>
+                    <p class="artist-birth">Born on: <span>{{ artist.birth_date }}</span></p>
+                </div>
+            </div>
+        </main>
+      
+    </div>
+</body>
+</html>
+

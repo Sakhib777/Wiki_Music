@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Wiki</title>
+    <link rel="stylesheet" href="static/home.css">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Music Wiki</h1>
+        </header>
+        <div class="search-bar">
+            <form action="{% url 'search' %}" method="get">
+                <input type="text" name="q" class="search-input" placeholder="Search for artists, albums, or songs">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+        <section class="section">
+            <h2 class="section-title">Artists</h2>
+            <ul class="list">
+                {% for artist in artists %}
+                    <li class="list-item"><a href="{% url 'artist_detail' artist.pk %}" class="link">{{ artist.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="section">
+            <h2 class="section-title">Albums</h2>
+            <ul class="list">
+                {% for album in albums %}
+                    <li class="list-item"><a href="{% url 'album_detail' album.pk %}" class="link">{{ album.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="section">
+            <h2 class="section-title">Songs</h2>
+            <ul class="list">
+                {% for song in songs %}
+                    <li class="list-item"><a href="{% url 'song_detail' song.pk %}" class="link">{{ song.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

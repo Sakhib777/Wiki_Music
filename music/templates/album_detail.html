@@ -1,0 +1,27 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ album.name }}</title>
+    <link rel="stylesheet" href="{% static 'album_detail.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="album-title">{{ album.name }}</h1>
+        </header>
+        <main class="main-content">
+            <div class="album-profile">
+                <img src="{{ album.cover.url }}" alt="{{ album.name }}" class="album-cover">
+                <div class="album-details">
+                    <p class="album-description">{{ album.description }}</p>
+                    <p class="album-release">Release Date: <span>{{ album.release_date }}</span></p>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+</body>
+</html>
+

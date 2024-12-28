@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Search Results for "{{ query }}"</h1>
+        </header>
+        <main class="main-content">
+            <section class="results-section">
+                <h2 class="section-title">Artists</h2>
+                {% if artists %}
+                    <ul class="results-list">
+                        {% for artist in artists %}
+                            <li class="result-item">
+                                <a href="{% url 'artist_detail' artist.pk %}" class="result-link">{{ artist.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="no-results">No artists found.</p>
+                {% endif %}
+            </section>
+
+            <section class="results-section">
+                <h2 class="section-title">Albums</h2>
+                {% if albums %}
+                    <ul class="results-list">
+                        {% for album in albums %}
+                            <li class="result-item">
+                                <a href="{% url 'album_detail' album.pk %}" class="result-link">{{ album.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="no-results">No albums found.</p>
+                {% endif %}
+            </section>
+
+            <section class="results-section">
+                <h2 class="section-title">Songs</h2>
+                {% if songs %}
+                    <ul class="results-list">
+                        {% for song in songs %}
+                            <li class="result-item">
+                                <a href="{% url 'song_detail' song.pk %}" class="result-link">{{ song.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="no-results">No songs found.</p>
+                {% endif %}
+            </section>
+        </main>
+    </div>
+</body>
+</html>

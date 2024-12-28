@@ -1,0 +1,94 @@
+/* Общий стиль для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовок */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+/* Поисковая строка */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Секции */
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Списки */
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item {
+    margin-bottom: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
